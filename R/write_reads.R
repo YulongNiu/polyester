@@ -74,10 +74,16 @@ write_reads = function(reads, fname, readlen, paired=TRUE, gzip, offset=1L,
             left_filepath = sprintf('%s.gz', left_filepath)
             right_filepath = sprintf('%s.gz', right_filepath)
         }
+
+        ##~~~~~~~~~~~~~~add qualities~~~~~~~~~~~~~~~~~~~~~~~~
+        mcols(lefts)$qualities <- GenerateQ(readlen, length(lefts))
+        mcols(rights)$qualities <- GenerateQ(readlen, length(rights))
+        ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
         writeXStringSet(lefts, filepath=left_filepath,
-            format="fasta", width=readlen, compress=compress, append=append)
+            format="fastq", compress=compress, append=append)
         writeXStringSet(rights, filepath=right_filepath,
-            format="fasta", width=readlen, compress=compress, append=append)
+            format="fastq", compress=compress, append=append)
     }else{
         outf = sprintf('%s.fasta', fname)
         if(compress){
@@ -90,8 +96,12 @@ write_reads = function(reads, fname, readlen, paired=TRUE, gzip, offset=1L,
           reads <- reads[sample(length(reads))]
           assign(".Random.seed", old_seed, envir = .GlobalEnv)
         }
-        writeXStringSet(reads, filepath=outf, format="fasta", width=readlen,
-            compress=compress, append=append)
+
+        ##~~~~~~~~~~~~~~add qualities~~~~~~~~~~~~~~~~~~~~~~~~
+        mcols(reads)$qualities <- GenerateQ(readlen, length(reads))
+        ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        writeXStringSet(reads, filepath=outf, format="fastq", compress=compress, append=append)
     }
 }
 
