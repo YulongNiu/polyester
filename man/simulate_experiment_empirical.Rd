@@ -4,8 +4,9 @@
 \alias{simulate_experiment_empirical}
 \title{Simulate RNA-seq experiment based on abundances from a data set}
 \usage{
-simulate_experiment_empirical(bg = NULL, fpkmMat = NULL, mean_rps = 5e+06,
-  grouplabels = NULL, decut = 1.5, outdir = ".", ncores = 1L, ...)
+simulate_experiment_empirical(bg = NULL, fpkmMat = NULL,
+  mean_rps = 5e+06, grouplabels = NULL, decut = 1.5, outdir = ".",
+  ncores = 1L, ...)
 }
 \arguments{
 \item{bg}{Ballgown object containing estimated transcript abundances in FPKM.

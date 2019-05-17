@@ -48,4 +48,3 @@ Generate a simulated data set based on known model parameters
 \author{
 Jeff Leek
 }
-

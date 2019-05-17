@@ -4,8 +4,9 @@
 \alias{simulate_experiment_countmat}
 \title{Simulate RNA-seq experiment}
 \usage{
-simulate_experiment_countmat(fasta = NULL, gtf = NULL, seqpath = NULL,
-  readmat, outdir = ".", paired = TRUE, seed = NULL, ncores = 1L, ...)
+simulate_experiment_countmat(fasta = NULL, gtf = NULL,
+  seqpath = NULL, readmat, outdir = ".", paired = TRUE,
+  seed = NULL, ncores = 1L, ...)
 }
 \arguments{
 \item{fasta}{path to FASTA file containing transcripts from which to simulate

@@ -22,4 +22,3 @@ Empirical fragment length distribution was estimated using 7
   small RNA sequencing across laboratories. Nature Biotechnology 31(11):
   1015-1022.
 }
-

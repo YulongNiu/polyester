@@ -4,8 +4,8 @@
 \alias{sgseq}
 \title{Internal sequencing function}
 \usage{
-sgseq(readmat, transcripts, paired, outdir, extras, reportCoverage = FALSE,
-  ncores = 1L)
+sgseq(readmat, transcripts, paired, outdir, extras,
+  reportCoverage = FALSE, ncores = 1L)
 }
 \arguments{
 \item{readmat}{a N by M matrix describing the full counts for the

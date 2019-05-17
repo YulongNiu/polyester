@@ -53,4 +53,3 @@ Given a GTF file (for transcript structure) and DNA sequences,
 \references{
 \url{http://www.ensembl.org/info/website/upload/gff.html}
 }
-

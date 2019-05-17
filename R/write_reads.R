@@ -94,3 +94,41 @@ write_reads = function(reads, fname, readlen, paired=TRUE, gzip, offset=1L,
             compress=compress, append=append)
     }
 }
+
+
+
+
+
+
+##' Generate quality
+##'
+##' Randomly generate read qualities.
+##'
+##' @title Random quality generator
+##' @param len An \code{integer} represents the length of reads.
+##' @param num An \code{integer} represents the reads number.
+##' @return A \code{BStringSet}
+##' @author Yulong Niu \email{yulong.niu@@hotmail.com}
+##' @importFrom stringi stri_rand_strings
+##' @importFrom Biostrings BStringSet
+##' @importFrom magrittr %>%
+##' @keywords internal
+##'
+GenerateQ <- function(len, num) {
+
+  ## candidateQ <- '!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~'
+
+  quality <- stri_rand_strings(num, len, pattern = '[\\u0021-\\u007E]') %>%
+    BStringSet
+
+  return(quality)
+}
+
+
+
+## library(Biostrings)
+## data(srPhiX174)
+## readlen <- unique(width(srPhiX174))
+## mcols(srPhiX174)$qualities <- GenerateQ(readlen, length(srPhiX174))
+## names(srPhiX174) <- paste0('reads', 1:length(srPhiX174))
+## writeXStringSet(srPhiX174, 'test.fq.gz', compress=TRUE, format = 'fastq')

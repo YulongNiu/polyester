@@ -32,4 +32,3 @@ McElroy KE, Luciani F, Thomas T (2012). GemSIM: general,
 error-model based simulator of next-generation sequencing data. 
 BMC Genomics 13(1), 74.
 }
-

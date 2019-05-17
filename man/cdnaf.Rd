@@ -26,4 +26,3 @@ Li W and Jiang T (2012): Transcriptome assembly and isoform expression
   Rohatgi A (2014): WebPlotDigitizer: Version 3.4 of WebPlotDigitizer. 
   ZENODO. 10.5281/zenodo.11835
 }
-

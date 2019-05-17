@@ -27,4 +27,3 @@ Draw nonzero negative binomial random numbers
   randomNBs  # 115, 5, 15
 
 }
-
