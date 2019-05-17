@@ -93,4 +93,3 @@ The empirical fragment length distribution was estimated using 7 randomly
 \seealso{
 \code{\link{logspline}}
 }
-

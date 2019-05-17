@@ -19,11 +19,13 @@ Imports:
     logspline,
     limma,
     parallel,
-    zlibbioc
+    zlibbioc,
+    stringi,
+    magrittr
 Suggests:
     knitr,
     ballgown,
     doParallel
 LazyLoad: true
 biocViews: Sequencing, DifferentialExpression
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1

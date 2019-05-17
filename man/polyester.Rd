@@ -23,13 +23,12 @@ A single function call produces RNA-seq reads in FASTA format from a
 See the vignette by typing \code{browseVignettes("polyester")} in 
   the R prompt.
 }
-\author{
-Alyssa Frazee, Andrew Jaffe, Rory Kirchner, Jeff Leek
-}
 \references{
 Alyssa C Frazee, Geo Pertea, Andrew E Jaffe, Ben Langmead, 
   Steven L Salzberg, Jeffrey T Leek (2014). Flexible isoform-level 
   differential expression analysis with Ballgown. BioRxiv preprint: 
   \url{http://biorxiv.org/content/early/2014/03/30/003665}.
 }
-
+\author{
+Alyssa Frazee, Andrew Jaffe, Rory Kirchner, Jeff Leek
+}

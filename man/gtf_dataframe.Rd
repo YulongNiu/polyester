@@ -16,4 +16,3 @@ In the data frame \code{gtf_dataframe}, each
   genomic features. See 
   \url{http://www.ensembl.org/info/website/upload/gff.html}.
 }
-

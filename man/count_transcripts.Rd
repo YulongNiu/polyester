@@ -31,4 +31,3 @@ fastapath = system.file("extdata", "chr22.fa", package="polyester")
 count_transcripts(fastapath) #918
 
 }
-

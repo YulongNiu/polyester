@@ -24,4 +24,3 @@ GEUVADIS data set:
 Lappalainen, et al (2013): Transcriptome and genome sequencing uncovers
   functional variation in humans. Nature 501: 506-511.
 }
-

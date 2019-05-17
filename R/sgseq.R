@@ -97,3 +97,5 @@ sgseq = function(readmat, transcripts, paired, outdir, extras, reportCoverage=FA
   }, mc.cores = ifelse(ncol(readmat) >= ncores, ncores, ncol(readmat)))
   invisible(NULL)
 }
+
+

@@ -4,8 +4,8 @@
 \alias{fpkm_to_counts}
 \title{Turn FPKMs from a ballgown object into estimated counts for transcripts}
 \usage{
-fpkm_to_counts(bg = NULL, mat = NULL, tlengths = NULL, mean_rps = 1e+08,
-  threshold = 0)
+fpkm_to_counts(bg = NULL, mat = NULL, tlengths = NULL,
+  mean_rps = 1e+08, threshold = 0)
 }
 \arguments{
 \item{bg}{ballgown object created from real RNA-seq dataset}
@@ -46,4 +46,3 @@ If transcripts/exons are represented by \code{GRanges} or
 \author{
 Jeff Leek
 }
-

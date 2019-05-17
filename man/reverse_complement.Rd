@@ -24,4 +24,3 @@ randomly reverse-complement half of the sequences in a DNAStringSet
   data(srPhiX174)
   srPhiX174_halfrc = reverse_complement(srPhiX174, seed=174)
 }
-
