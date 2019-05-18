@@ -76,8 +76,8 @@ write_reads = function(reads, fname, readlen, paired=TRUE, gzip, offset=1L,
         }
 
         ##~~~~~~~~~~~~~~add qualities~~~~~~~~~~~~~~~~~~~~~~~~
-        mcols(lefts)$qualities <- GenerateQ(readlen, length(lefts))
-        mcols(rights)$qualities <- GenerateQ(readlen, length(rights))
+        mcols(lefts)$qualities <- GenerateQ(width(lefts), length(lefts))
+        mcols(rights)$qualities <- GenerateQ(width(rights), length(rights))
         ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
         writeXStringSet(lefts, filepath=left_filepath,
@@ -98,7 +98,7 @@ write_reads = function(reads, fname, readlen, paired=TRUE, gzip, offset=1L,
         }
 
         ##~~~~~~~~~~~~~~add qualities~~~~~~~~~~~~~~~~~~~~~~~~
-        mcols(reads)$qualities <- GenerateQ(readlen, length(reads))
+        mcols(reads)$qualities <- GenerateQ(width(reads), length(reads))
         ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
         writeXStringSet(reads, filepath=outf, format="fastq", compress=compress, append=append)
@@ -115,7 +115,7 @@ write_reads = function(reads, fname, readlen, paired=TRUE, gzip, offset=1L,
 ##' Randomly generate read qualities.
 ##'
 ##' @title Random quality generator
-##' @param len An \code{integer} represents the length of reads.
+##' @param len An \code{integer vector} represents the length of reads.
 ##' @param num An \code{integer} represents the reads number.
 ##' @return A \code{BStringSet}
 ##' @author Yulong Niu \email{yulong.niu@@hotmail.com}
